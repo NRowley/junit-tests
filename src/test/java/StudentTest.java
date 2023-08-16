@@ -1,7 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
@@ -34,11 +34,8 @@ public class StudentTest {
 
     @Test
     public void testStudentGetters() {
-        ArrayList<Integer> killianGrades = new ArrayList<>();
+        ArrayList<Integer> killianGrades = new ArrayList<>(Arrays.asList(100, 90, 95));
 
-        killianGrades.add(100);
-        killianGrades.add(90);
-        killianGrades.add(95);
         assertEquals(actualStudent.getName(), "Killian");
         assertEquals(actualStudent.getId(), 3122019);
         assertEquals(actualStudent.getGrades(), killianGrades);
